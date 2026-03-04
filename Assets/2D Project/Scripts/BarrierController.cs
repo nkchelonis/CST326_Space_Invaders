@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class BarrierController : MonoBehaviour
 {
+    
     private int _health = 5;
+    private SpriteRenderer _spriteRenderer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer.color = Color.white;
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class BarrierController : MonoBehaviour
         {
             //decrease health of barrier and destroy the bullet
             _health--;
+            UpdateColor();
             Destroy(other.gameObject);
         }
     }
@@ -35,7 +39,28 @@ public class BarrierController : MonoBehaviour
         {
             //deactivate player and destroy the bullet
             _health--;
+            UpdateColor();
             Destroy(other.gameObject);
+        }
+    }
+
+    private void UpdateColor()
+    {
+        if (_health == 4)
+        {
+            _spriteRenderer.color = Color.gray7;
+        }
+        else if (_health == 3)
+        {
+            _spriteRenderer.color = Color.gray5;
+        }
+        else if (_health == 2)
+        {
+            _spriteRenderer.color = Color.gray4;
+        }
+        else if (_health == 1)
+        {
+            _spriteRenderer.color = Color.gray3;
         }
     }
 }

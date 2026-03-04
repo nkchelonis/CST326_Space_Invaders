@@ -2179,6 +2179,106 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3008030384869193741, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: oneHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: fe7adf3d092f3bd4b904e25b28921af1, type: 2}
+    - target: {fileID: 3008030384869193741, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: twoHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d21f42759f1ffc42adf2674e531ca80, type: 2}
+    - target: {fileID: 3008030384869193741, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fourHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f80c8aeb1ce08346ba0684c21f679aa, type: 2}
+    - target: {fileID: 3008030384869193741, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fullHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: eea4941bbfa4dd644b254206bae1d80a, type: 2}
+    - target: {fileID: 3008030384869193741, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: threeHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 04153fb9f9645d349b0f7f9d3c79103b, type: 2}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: oneHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: fe7adf3d092f3bd4b904e25b28921af1, type: 2}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: twoHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d21f42759f1ffc42adf2674e531ca80, type: 2}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fourHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f80c8aeb1ce08346ba0684c21f679aa, type: 2}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fullHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: eea4941bbfa4dd644b254206bae1d80a, type: 2}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: oneHealth.b
+      value: 0.23529413
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: oneHealth.g
+      value: 0.23529413
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: oneHealth.r
+      value: 0.23529413
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: threeHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 04153fb9f9645d349b0f7f9d3c79103b, type: 2}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: twoHealth.b
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: twoHealth.g
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: twoHealth.r
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fourHealth.b
+      value: 0.70980394
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fourHealth.g
+      value: 0.70980394
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fourHealth.r
+      value: 0.70980394
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fullHealth.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fullHealth.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fullHealth.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: threeHealth.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: threeHealth.g
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186804928450472313, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: threeHealth.r
+      value: 0.5529412
+      objectReference: {fileID: 0}
     - target: {fileID: 3275217182168532763, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -2219,6 +2319,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6149165695015502715, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: oneHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: fe7adf3d092f3bd4b904e25b28921af1, type: 2}
+    - target: {fileID: 6149165695015502715, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: twoHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d21f42759f1ffc42adf2674e531ca80, type: 2}
+    - target: {fileID: 6149165695015502715, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fourHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f80c8aeb1ce08346ba0684c21f679aa, type: 2}
+    - target: {fileID: 6149165695015502715, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fullHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: eea4941bbfa4dd644b254206bae1d80a, type: 2}
+    - target: {fileID: 6149165695015502715, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: threeHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 04153fb9f9645d349b0f7f9d3c79103b, type: 2}
+    - target: {fileID: 6956316358763749359, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: oneHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: fe7adf3d092f3bd4b904e25b28921af1, type: 2}
+    - target: {fileID: 6956316358763749359, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: twoHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d21f42759f1ffc42adf2674e531ca80, type: 2}
+    - target: {fileID: 6956316358763749359, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fourHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f80c8aeb1ce08346ba0684c21f679aa, type: 2}
+    - target: {fileID: 6956316358763749359, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fullHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: eea4941bbfa4dd644b254206bae1d80a, type: 2}
+    - target: {fileID: 6956316358763749359, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: threeHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 04153fb9f9645d349b0f7f9d3c79103b, type: 2}
+    - target: {fileID: 8014514186150134394, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: oneHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: fe7adf3d092f3bd4b904e25b28921af1, type: 2}
+    - target: {fileID: 8014514186150134394, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: twoHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d21f42759f1ffc42adf2674e531ca80, type: 2}
+    - target: {fileID: 8014514186150134394, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fourHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f80c8aeb1ce08346ba0684c21f679aa, type: 2}
+    - target: {fileID: 8014514186150134394, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: fullHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: eea4941bbfa4dd644b254206bae1d80a, type: 2}
+    - target: {fileID: 8014514186150134394, guid: 9455c0cf02ae9df41b645f6b8693c816, type: 3}
+      propertyPath: threeHealth
+      value: 
+      objectReference: {fileID: 2100000, guid: 04153fb9f9645d349b0f7f9d3c79103b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

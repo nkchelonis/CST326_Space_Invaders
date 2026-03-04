@@ -12,7 +12,7 @@ public class EnemyRootController : MonoBehaviour
     private float _enemySpeed;
     private float _currentTime = 0;
     private float _direction = 1;
-    private bool _wallShift = false;
+    //private bool _wallShift = false;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,7 +26,7 @@ public class EnemyRootController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _wallShift = false;
+        //_wallShift = false;
         //hopefully moves enemies in steps
         _currentTime += Time.deltaTime;
         if ((int)_currentTime == 1)
