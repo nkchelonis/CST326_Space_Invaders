@@ -1,14 +1,17 @@
 
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
     
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
+    public GameObject enemyInfoTable;
     private int _currentScore = 0;
     private int _highScore = 0;
+    private float _timer = 3f;
 
     private const string HIGH_SCORE_KEY = "SpaceInvaders_HighScore";
     
@@ -21,6 +24,7 @@ public class GameManager : MonoBehaviour
        _highScore = PlayerPrefs.GetInt(HIGH_SCORE_KEY, 0);
        string text = "HIGH SCORE: " + _highScore.ToString("d4");
        highScoreText.SetText(text);
+       enemyInfoTable.SetActive(true);
     }
 
     void Update()
@@ -30,6 +34,24 @@ public class GameManager : MonoBehaviour
         {
             _highScore = _currentScore;
             PlayerPrefs.SetInt(HIGH_SCORE_KEY, _highScore);
+        }
+
+        //decrease time for score table to show
+        if ((int)_timer > 0)
+        {
+            _timer -= Time.deltaTime;
+        }
+        if ((int)_timer == 0 && enemyInfoTable.activeSelf)
+        {
+            _timer = -1f;
+            enemyInfoTable.SetActive(false);
+        }
+
+        //deactivate score table if click
+        if (enemyInfoTable.activeSelf && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            enemyInfoTable.SetActive(false);
+            _timer = -1f;
         }
     }
 

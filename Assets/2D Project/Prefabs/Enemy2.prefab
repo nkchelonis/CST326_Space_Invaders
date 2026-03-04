@@ -97,6 +97,8 @@ MonoBehaviour:
   ticClip: {fileID: 8300000, guid: 32edbd9306764e0409b84fef5f1bc5d2, type: 3}
   tacClip: {fileID: 8300000, guid: 7b0f7e486d2e34f40a0250b7286fe788, type: 3}
   scoreValue: 10
+  bulletPrefab: {fileID: 7351773647349642974, guid: 67382209d77af434d9abf86d6b357548, type: 3}
+  shootOffsetTransform: {fileID: 107741887884186641}
 --- !u!95 &8450670613892259373
 Animator:
   serializedVersion: 7

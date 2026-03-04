@@ -8,13 +8,28 @@ public class Enemy : MonoBehaviour
     public static event EnemyDiedFunc OnEnemyDied;
 
     public delegate void EnemyHitWallFunc();
-
     public static event EnemyHitWallFunc OnEnemyHitWall;
 
     public AudioClip ticClip;
     public AudioClip tacClip;
 
     public int scoreValue;
+    public GameObject bulletPrefab;
+    public Transform shootOffsetTransform;
+
+
+    void Update()
+    {
+        //randomly shoot bullets
+        if (Random.Range(1, 4500) == 5)
+        {
+            GameObject shot = Instantiate(bulletPrefab, shootOffsetTransform.position, Quaternion.identity);
+            
+            //destroy the bullet after 3 seconds
+            Destroy(shot, 3f); //auto destroy after 3 seconds
+        }
+        
+    }
     
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -38,7 +53,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
             Debug.Log("That's a wall!");
-            //OnEnemyHitWall?.Invoke();
+            OnEnemyHitWall?.Invoke();
         }
     }
 

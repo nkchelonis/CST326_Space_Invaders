@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -46,6 +47,16 @@ public class Player : MonoBehaviour
         else if (Keyboard.current != null && Keyboard.current.rightArrowKey.isPressed)
         {
             transform.Translate(deltaX, 0, 0);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy Bullet"))
+        {
+            //deactivate player and destroy the bullet
+            gameObject.SetActive(false);
+            Destroy(other.gameObject);
         }
     }
 }
