@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyRootController : MonoBehaviour
 {
@@ -12,7 +14,7 @@ public class EnemyRootController : MonoBehaviour
     private float _enemySpeed;
     private float _currentTime = 0;
     private float _direction = 1;
-    //private bool _wallShift = false;
+    private bool _wallShift = false;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,7 +28,6 @@ public class EnemyRootController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //_wallShift = false;
         //hopefully moves enemies in steps
         _currentTime += Time.deltaTime;
         if ((int)_currentTime == 1)
@@ -43,6 +44,11 @@ public class EnemyRootController : MonoBehaviour
         {
             float enemySpeedBoost = (1f / enemyCount)*10;  //fewer enemies -> larger fraction -> larger boost to speed
             speed = 1 + enemySpeedBoost;
+        }
+
+        if (enemyCount == 0)
+        {
+            LoadCredits();
         }
         
 
@@ -122,30 +128,42 @@ public class EnemyRootController : MonoBehaviour
         float deltaX = transform.position.x + _direction*speed;
         float deltaY = transform.position.y;
 
+        if (_wallShift)
+        {
+            Debug.Log("Changing direction!");
+            _direction *= -1;  //swaps enemy direction
+            deltaX = transform.position.x + _direction*speed + _direction;
+            deltaY = transform.position.y - .5f;  //moves the enemies down one
+            transform.position = new Vector3(deltaX, deltaY, 0);
+            _wallShift = false;
+        }
+        
+        /*
         //hard coded swaps for direction :/
         if (transform.position.x > -2.5f || transform.position.x < -8.5f)
         {
             _direction *= -1;
             deltaX = transform.position.x + _direction*speed;
             deltaY -= .25f;
-        }
+        }*/
         
         transform.position = new Vector3(deltaX, deltaY, 0);
     }
 
     void OnEnemyHitWall()
     {
-        /*
-        if (!_wallShift)
-        {
-            _wallShift = true;
-            Debug.Log("Changing direction!");
-            _direction *= -1;  //swaps enemy direction
-            float deltaX = transform.position.x + _direction;
-            float deltaY = transform.position.y - .5f;  //moves the enemies down one
-            transform.position = new Vector3(deltaX, deltaY, 0);
-        }
-        */
+        _wallShift = true;
         
+    }
+    
+    public void LoadCredits()
+    {
+        StartCoroutine(_LoadCredits());
+        IEnumerator _LoadCredits()
+        {
+            AsyncOperation loadOperation = SceneManager.LoadSceneAsync("Credits");
+            while(!loadOperation!.isDone) yield return null;        
+            
+        }
     }
 }

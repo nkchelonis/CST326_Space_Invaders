@@ -96,6 +96,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ticClip: {fileID: 8300000, guid: 32edbd9306764e0409b84fef5f1bc5d2, type: 3}
   tacClip: {fileID: 8300000, guid: 7b0f7e486d2e34f40a0250b7286fe788, type: 3}
+  shootClip: {fileID: 8300000, guid: bd552c1bc6eddeb4f9816a7ad2f55e87, type: 3}
+  corkPopClip: {fileID: 8300000, guid: a73f86c71c35bf1499136b7bd64a5b26, type: 3}
   scoreValue: 10
   bulletPrefab: {fileID: 7351773647349642974, guid: 67382209d77af434d9abf86d6b357548, type: 3}
   shootOffsetTransform: {fileID: 107741887884186641}

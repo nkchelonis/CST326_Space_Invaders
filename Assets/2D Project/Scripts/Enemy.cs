@@ -1,4 +1,5 @@
 ﻿
+using System.Collections;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -12,18 +13,30 @@ public class Enemy : MonoBehaviour
 
     public AudioClip ticClip;
     public AudioClip tacClip;
+    public AudioClip shootClip;
+    public AudioClip corkPopClip;
 
     public int scoreValue;
     public GameObject bulletPrefab;
     public Transform shootOffsetTransform;
+    
+    private AudioSource _audioSource;
+    private Animator _animator;
 
+    void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+        _animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
         //randomly shoot bullets
-        if (Random.Range(1, 4500) == 5)
+        if (Random.Range(1, 7500) == 5)
         {
             GameObject shot = Instantiate(bulletPrefab, shootOffsetTransform.position, Quaternion.identity);
+            _audioSource.PlayOneShot(shootClip);
+            _animator.SetTrigger("Shot Trigger");
             
             //destroy the bullet after 3 seconds
             Destroy(shot, 3f); //auto destroy after 3 seconds
@@ -39,13 +52,19 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet"))
         {
             Destroy(collision.gameObject); //destroys bullet, doesn't need to be here if bullet is destroyed by itself
-            // todo - trigger death animation
-            Destroy(gameObject);  //this should be after death animation plays
+            // trigger death animation
+            GetComponent<AudioSource>().PlayOneShot(corkPopClip);
+            _animator.SetTrigger("Death Trigger");
             
             //send out message that an enemy has died
             OnEnemyDied?.Invoke(scoreValue);  //? says if it's null then don't Invoke
         }
         
+    }
+
+    void EnemyDied()
+    {
+        Destroy(gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
