@@ -33,14 +33,13 @@ public class Player : MonoBehaviour
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             GameObject shot = Instantiate(bulletPrefab, shootOffsetTransform.position, Quaternion.identity);
-            Debug.Log("Bang!");
+            //Debug.Log("Bang!");
 
             //destroy the bullet after 3 seconds
             Destroy(shot, 3f); //auto destroy after 3 seconds
             
             // trigger shoot sound
             _audioSource.PlayOneShot(shotPop);
-            
             _animator.SetTrigger("Shot Trigger");
         }
 

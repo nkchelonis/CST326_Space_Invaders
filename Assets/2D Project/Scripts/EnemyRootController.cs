@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class EnemyRootController : MonoBehaviour
 {
+   // public delegate void EnemyMovedFunc();
+   // public static event EnemyMovedFunc OnEnemyMoved;
+    
+    
     public Transform enemyRoot;
 
     public GameObject enemyLow;
@@ -130,13 +134,15 @@ public class EnemyRootController : MonoBehaviour
 
         if (_wallShift)
         {
-            Debug.Log("Changing direction!");
+            //Debug.Log("Changing direction!");
             _direction *= -1;  //swaps enemy direction
             deltaX = transform.position.x + _direction*speed + _direction;
             deltaY = transform.position.y - .5f;  //moves the enemies down one
             transform.position = new Vector3(deltaX, deltaY, 0);
             _wallShift = false;
         }
+
+        //OnEnemyMoved?.Invoke();
         
         /*
         //hard coded swaps for direction :/
@@ -166,4 +172,5 @@ public class EnemyRootController : MonoBehaviour
             
         }
     }
+    
 }

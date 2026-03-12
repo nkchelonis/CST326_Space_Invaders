@@ -22,11 +22,13 @@ public class Enemy : MonoBehaviour
     
     private AudioSource _audioSource;
     private Animator _animator;
+    
 
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
+        //EnemyRootController.OnEnemyMoved += OnEnemyMoved;
     }
 
     void Update()
@@ -87,4 +89,18 @@ public class Enemy : MonoBehaviour
         //Debug.Log("tac");
         GetComponent<AudioSource>().PlayOneShot(tacClip);
     }
+
+    
+    /*
+    void OnEnemyMoved()
+    {
+        if (_animator.GetBool("Arms Up"))
+        {
+            _animator.SetBool("Arms Up", false);
+        }
+        else
+        {
+            _animator.SetBool("Arms Up", true);
+        }
+    }*/
 }
